@@ -1,0 +1,87 @@
+header {
+    height: 150px;
+    padding: 1px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #000080;
+    background-image: url("../images/nkos_logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: right center;
+}
+
+header h1 {
+    height: 100%;
+    text-align: center;
+    line-height: 50%;
+    font-size: 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+nav {
+    height: 50px;
+    padding: 1px;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #D3D3D3;
+}
+
+nav ul {
+    height: 100%;
+    text-align: center;
+    line-height: 50%;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li {
+    height: 100%;
+    width: 150px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000080;
+}
+
+nav ul li a:hover {
+    background-color: #A9A9A9;
+    color: #8B0000;
+}
+
+main {
+    padding: 1px;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #4169E1;
+}
+
+main article {
+    margin: 20px;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+footer {
+    height: 50px;
+    padding: 1px;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #D3D3D3;
+}
+
+footer p {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000080;
+}

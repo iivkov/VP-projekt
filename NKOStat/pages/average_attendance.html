@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NKOStat – Početna</title>
+    <title>NKOStat – Prosječna posjećenost po sezonama</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-</head>
+    <script src="http://d3js.org/d3.v4.js" charset="utf-8"></script>
+    <script src="../scripts/average_attendance.js"></script>
+  </head>
 
-<body>
+  <body>
 
     <header>
         <h1>NKOStat</h1>
@@ -17,16 +18,20 @@
     <nav>
         <ul>
             <li><a href="../index.html">Početna</a></li>
-            <li><a href="attendance.html">Posjećenost</a></li>
+            <li><a href="average_attendance.html">Posjećenost po sezonama</a></li>
+            <li><a href="cards.html">Kartoni po sezonama</a></li>
+            <li><a href="last_season.html">Sezona 2019./20.</a></li>
         </ul>
     </nav>
 
     <main>
 
         <article>
-            <h2>Posjećenost</h2>
+            <h2>Prosječna posjećenost po sezonama</h2>
             <p>Vizualizacija prosječne posjećenosti Gradskog vrta na utakmicama Prve HNL od sezone 1992. do sezone 2019./20.</p>
         </article>
+
+        <div id="average_attendance_chart"></div>
 
     </main>
 

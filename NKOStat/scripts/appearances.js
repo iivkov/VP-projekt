@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
       var subgroupValue = d.data[subgroupName];
       tooltip
         .html("Appearances, " + subgroupName + ": " + subgroupValue + " matches")
+        .transition()
         .style("opacity", 1)
     }
     var mousemove = function(d) {
@@ -82,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
     }
     var mouseleave = function(d) {
       tooltip
+        .transition()
+        .duration(500)
         .style("opacity", 0)
     }
 

@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     // Y axis
     var y = d3.scaleLinear()
-      .domain([1000, 10000])
+      .domain([0, 10000])
       .range([height, 0]);
     svg.append("g")
       .call(d3.axisLeft(y));
@@ -56,16 +56,19 @@ document.addEventListener('DOMContentLoaded', function(e) {
     // Functions for changing the tooltip when user goes over it
     var mouseover = function(d) {
       tooltip
+        .html("Average attendance (" + d.season + "): " + d.average_attendance)
+        .transition()
         .style("opacity", 1)
     }
     var mousemove = function(d) {
       tooltip
-        .html("Average attendance: " + d.average_attendance)
         .style("left", (d3.mouse(this)[0] + 70) + "px")
         .style("top", (d3.mouse(this)[1]) + "px")
     }
     var mouseleave = function(d) {
       tooltip
+        .transition()
+        .duration(500)
         .style("opacity", 0)
     }
 

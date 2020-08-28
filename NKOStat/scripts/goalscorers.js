@@ -56,16 +56,19 @@ document.addEventListener('DOMContentLoaded', function(e) {
     // Functions for changing the tooltip when user goes over it
     var mouseover = function(d) {
       tooltip
+        .html(d.player + ", " + d.goals + " goals scored")
+        .transition()
         .style("opacity", 1)
     }
     var mousemove = function(d) {
       tooltip
-        .html("Goals scored: " + d.goals)
         .style("left", (d3.mouse(this)[0] + 70) + "px")
         .style("top", (d3.mouse(this)[1]) + "px")
     }
     var mouseleave = function(d) {
       tooltip
+        .transition()
+        .duration(500)
         .style("opacity", 0)
     }
 

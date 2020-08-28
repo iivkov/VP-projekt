@@ -54,6 +54,36 @@ document.addEventListener('DOMContentLoaded', function(e) {
       .domain(subgroups)
       .range(['yellow', 'red'])
 
+    // Tooltip
+    var tooltip = d3.select("#cards_chart")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
+    // Functions for changing the tooltip when user goes over it
+    var mouseover = function(d) {
+      tooltip
+      .html(d.value + " cards")
+      .transition()
+      .style("opacity", 1)
+    }
+    var mousemove = function(d) {
+      tooltip
+      .style("left", (d3.mouse(this)[0] + 70) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+    }
+    var mouseleave = function(d) {
+      tooltip
+      .transition()
+      .duration(1000)
+      .style("opacity", 0)
+    }
+
     // Bars
     svg.append("g")
       .selectAll("g")
@@ -86,5 +116,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
       .attr("fill", function(d) {
         return color(d.key);
       })
-  })
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave)
+      })
 });
